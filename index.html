@@ -1,0 +1,17 @@
+<form onsubmit="return check(event)">
+  <input id="mark" type="text">
+  <button id="submit">Submit</button>
+</form>
+<p id="result"></p>
+<script>
+function check(e){
+  e.preventDefault();
+  const v = document.getElementById("mark").value.trim();
+  const r = document.getElementById("result");
+  if (/^\d+$/.test(v) && Number(v) >= 0 && Number(v) <= 10) {
+    r.textContent = "Accepted";
+  } else {
+    r.textContent = "Rejected";
+  }
+}
+</script>
