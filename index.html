@@ -7,10 +7,11 @@
 function check(e){
   e.preventDefault();
   const v = document.getElementById("mark").value.trim();
-  const n = Number(v);
   const r = document.getElementById("result");
-  if (v !== "" && Number.isInteger(n) && n >= 0 && n <= 10)
+  if (/^\d+$/.test(v) && Number(v) >= 0 && Number(v) <= 10) {
     r.textContent = "Accepted";
-  else r.textContent = "Rejected";
+  } else {
+    r.textContent = "Rejected";
+  }
 }
 </script>

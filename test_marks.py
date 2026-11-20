@@ -2,7 +2,7 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-tests = [("-1","Rejected"),("0","Accepted"),("5","Accepted"),("10","Accepted"),("11","Rejected")]
+tests = [("-1","Rejected"),("0","Accepted"),("5","Accepted"),("10","Accepted"),("11","Rejected"),("1e1","Rejected"),("0xA","Rejected")]
 path = "file:///" + os.path.abspath("index.html").replace("\\", "/")
 driver = webdriver.Chrome()
 passed = 0
